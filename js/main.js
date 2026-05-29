@@ -1,13 +1,15 @@
 // Stakeslinger — language toggle + footer year
 (function () {
   var STORE_KEY = "sl_lang";
-  var supported = ["en", "de"];
+  var supported = ["en", "de", "es"];
 
   function detect() {
     var saved = localStorage.getItem(STORE_KEY);
     if (saved && supported.indexOf(saved) !== -1) return saved;
     var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
-    return nav === "de" ? "de" : "en";
+    if (nav === "de") return "de";
+    if (nav === "es") return "es";
+    return "en";
   }
 
   function apply(lang) {
