@@ -24,10 +24,16 @@ stakeslinger.com/
 
 ## TODO before launch
 
-- [ ] Add logo → `images/logo.png` (and `icons/icon-*.png`, `favicon.ico`, `images/og-image.png`)
-- [ ] Fill in `impressum.html` (name, address — legally required in Germany)
+- [x] Add logo → transparent `images/logo.png` + `icons/icon-*.png` + `favicon.ico` (from logo.jpg)
+- [x] Legal docs based on Mexico (LFPDPPP/Aviso) + EU transfer (Firebase Vienna) instead of German law
+- [ ] Fill in `impressum.html` operator details (name, address, RFC — Mexico)
 - [ ] Replace placeholder app cards in `index.html` with real apps + store links
 - [ ] Review `privacy-policy.html` data table to match what each app actually collects
+- [ ] Add `images/og-image.png` (1200×630, referenced in meta)
+
+> **Jurisdiction:** Company is based in **Mexico**; Firebase/backend region is **Vienna (EU)**,
+> so user data is processed in the EU. Privacy policy covers both LFPDPPP (Mexico) and GDPR (EU)
+> and discloses the Mexico↔EU transfer.
 
 ## Local preview
 
