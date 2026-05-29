@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stakeslinger.com/sitemap.xml
