@@ -73,65 +73,52 @@
         <span data-lang="de">Wir entwickeln mobile Apps für Android und iOS.</span><span data-lang="es">Desarrollamos apps móviles para Android e iOS.</span>
       </p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="#apps"><span data-lang="en">Our Apps</span><span data-lang="de">Unsere Apps</span><span data-lang="es">Nuestras Apps</span></a>
+        <a class="btn btn-primary" href="#apps"><span data-lang="en">Join the beta</span><span data-lang="de">Beta beitreten</span><span data-lang="es">Unirme a la beta</span></a>
         <a class="btn btn-ghost" href="#contact"><span data-lang="en">Contact</span><span data-lang="de">Kontakt</span><span data-lang="es">Contacto</span></a>
       </div>
     </div>
   </section>
 
-  <!-- Apps -->
+  <!-- App: Lets Drink (Beta) -->
   <section id="apps">
     <div class="container">
-      <h2><span data-lang="en">Our Apps</span><span data-lang="de">Unsere Apps</span><span data-lang="es">Nuestras Apps</span></h2>
-      <p class="sub">
-        <span data-lang="en">Available on the App Store and Google Play.</span>
-        <span data-lang="de">Verfügbar im App Store und bei Google Play.</span><span data-lang="es">Disponibles en App Store y Google Play.</span>
-      </p>
-      <div class="grid grid-3">
+      <div class="card app-card app-solo">
+        <div class="app-icon">🍻</div>
+        <h3>Lets Drink</h3>
+        <span class="badge soon"><span data-lang="en">Private Beta</span><span data-lang="de">Private Beta</span><span data-lang="es">Beta privada</span></span>
+        <!-- TODO: refine Lets Drink tagline -->
+        <p style="margin-top:14px;">
+          <span data-lang="en">The social drinking game for your next party. Sign up for the private beta and be among the first to play.</span>
+          <span data-lang="de">Das Trinkspiel für deine nächste Party. Melde dich für die private Beta an und sei von Anfang an dabei.</span>
+          <span data-lang="es">El juego para beber en tu próxima fiesta. Regístrate en la beta privada y sé de los primeros en jugar.</span>
+        </p>
 
-        <!-- TODO: replace placeholder app cards with real apps -->
-        <div class="card app-card">
-          <div class="app-icon">🎯</div>
-          <h3>App Name</h3>
-          <p>
-            <span data-lang="en">Short description of what this app does.</span>
-            <span data-lang="de">Kurze Beschreibung, was diese App macht.</span><span data-lang="es">Breve descripción de lo que hace esta app.</span>
+        <form class="form" id="betaForm" style="margin-top:8px;">
+          <label for="beta-email">
+            <span data-lang="en">Your email *</span><span data-lang="de">Deine E-Mail *</span><span data-lang="es">Tu correo *</span>
+          </label>
+          <input type="email" id="beta-email" name="email" required autocomplete="email" placeholder="you@example.com">
+
+          <label for="beta-platform">
+            <span data-lang="en">Platform</span><span data-lang="de">Plattform</span><span data-lang="es">Plataforma</span>
+          </label>
+          <select id="beta-platform" name="platform">
+            <option value="Android">Android</option>
+            <option value="iOS">iOS</option>
+            <option value="Both">Android + iOS</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary">
+            <span data-lang="en">Join the beta</span><span data-lang="de">Beta beitreten</span><span data-lang="es">Unirme a la beta</span>
+          </button>
+
+          <p class="note">
+            <span data-lang="en">This opens your email app with a pre-filled message. If it doesn't, email us at </span>
+            <span data-lang="de">Dies öffnet deine E-Mail-App mit vorausgefüllter Nachricht. Falls nicht, schreib an </span>
+            <span data-lang="es">Esto abre tu app de correo con un mensaje predefinido. Si no funciona, escríbenos a </span>
+            <a href="mailto:tehstakeslinger@gmail.com?subject=Lets%20Drink%20Beta%20signup">tehstakeslinger@gmail.com</a>.
           </p>
-          <span class="badge soon"><span data-lang="en">Coming soon</span><span data-lang="de">Demnächst</span><span data-lang="es">Próximamente</span></span>
-          <div class="store-badges">
-            <a href="#" aria-label="Google Play">▶ Google Play</a>
-            <a href="#" aria-label="App Store"> App Store</a>
-          </div>
-        </div>
-
-        <div class="card app-card">
-          <div class="app-icon">🃏</div>
-          <h3>App Name</h3>
-          <p>
-            <span data-lang="en">Short description of what this app does.</span>
-            <span data-lang="de">Kurze Beschreibung, was diese App macht.</span><span data-lang="es">Breve descripción de lo que hace esta app.</span>
-          </p>
-          <span class="badge soon"><span data-lang="en">Coming soon</span><span data-lang="de">Demnächst</span><span data-lang="es">Próximamente</span></span>
-          <div class="store-badges">
-            <a href="#" aria-label="Google Play">▶ Google Play</a>
-            <a href="#" aria-label="App Store"> App Store</a>
-          </div>
-        </div>
-
-        <div class="card app-card">
-          <div class="app-icon">🎲</div>
-          <h3>App Name</h3>
-          <p>
-            <span data-lang="en">Short description of what this app does.</span>
-            <span data-lang="de">Kurze Beschreibung, was diese App macht.</span><span data-lang="es">Breve descripción de lo que hace esta app.</span>
-          </p>
-          <span class="badge soon"><span data-lang="en">Coming soon</span><span data-lang="de">Demnächst</span><span data-lang="es">Próximamente</span></span>
-          <div class="store-badges">
-            <a href="#" aria-label="Google Play">▶ Google Play</a>
-            <a href="#" aria-label="App Store"> App Store</a>
-          </div>
-        </div>
-
+        </form>
       </div>
     </div>
   </section>
@@ -168,5 +155,21 @@
   </footer>
 
   <script src="/js/main.js"></script>
+  <script>
+    document.getElementById("betaForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = document.getElementById("beta-email").value || "(not provided)";
+      var platform = document.getElementById("beta-platform").value || "(not specified)";
+      var subject = "Lets Drink Beta signup";
+      var body =
+        "Lets Drink — private beta signup\n\n" +
+        "Email: " + email + "\n" +
+        "Platform: " + platform + "\n\n" +
+        "Please add me to the Lets Drink beta.";
+      window.location.href =
+        "mailto:tehstakeslinger@gmail.com?subject=" +
+        encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  </script>
 </body>
 </html>

@@ -131,6 +131,11 @@ section .sub { color: var(--text-dim); text-align: center; max-width: 620px; mar
 
 /* App cards */
 .app-card { text-align: center; }
+.app-solo { max-width: 520px; margin: 0 auto; text-align: left; }
+.app-solo .app-icon, .app-solo h3, .app-solo > .badge { margin-left: auto; margin-right: auto; }
+.app-solo h3 { text-align: center; font-size: 1.6rem; }
+.app-solo > .badge { display: block; width: fit-content; }
+.app-solo > p { text-align: center; }
 .app-card .app-icon {
   width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 16px;
   background: var(--circle); border: 1px solid var(--border);
