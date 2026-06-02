@@ -93,29 +93,33 @@
           <span data-lang="es">El juego para beber en tu próxima fiesta. Regístrate en la beta privada y sé de los primeros en jugar.</span>
         </p>
 
-        <form class="form" id="betaForm" style="margin-top:8px;">
-          <label for="beta-email">
-            <span data-lang="en">Your email *</span><span data-lang="de">Deine E-Mail *</span><span data-lang="es">Tu correo *</span>
-          </label>
-          <input type="email" id="beta-email" name="email" required autocomplete="email" placeholder="you@example.com">
-
-          <label for="beta-platform">
+        <form class="form" id="betaForm">
+          <label>
             <span data-lang="en">Platform</span><span data-lang="de">Plattform</span><span data-lang="es">Plataforma</span>
           </label>
-          <select id="beta-platform" name="platform">
-            <option value="Android">Android</option>
-            <option value="iOS">iOS</option>
-            <option value="Both">Android + iOS</option>
-          </select>
+          <div class="segment">
+            <input type="radio" id="pf-and" name="platform" value="Android" checked>
+            <label for="pf-and">Android</label>
+            <input type="radio" id="pf-ios" name="platform" value="iOS">
+            <label for="pf-ios">iOS</label>
+            <input type="radio" id="pf-both" name="platform" value="Android + iOS">
+            <label for="pf-both"><span data-lang="en">Both</span><span data-lang="de">Beide</span><span data-lang="es">Ambos</span></label>
+          </div>
 
-          <button type="submit" class="btn btn-primary">
-            <span data-lang="en">Join the beta</span><span data-lang="de">Beta beitreten</span><span data-lang="es">Unirme a la beta</span>
-          </button>
+          <label for="beta-email">
+            <span data-lang="en">Your email</span><span data-lang="de">Deine E-Mail</span><span data-lang="es">Tu correo</span>
+          </label>
+          <div class="field-inline">
+            <input type="email" id="beta-email" name="email" required autocomplete="email" placeholder="you@example.com">
+            <button type="submit" class="btn btn-primary">
+              <span data-lang="en">Join</span><span data-lang="de">Beitreten</span><span data-lang="es">Unirme</span>
+            </button>
+          </div>
 
           <p class="note">
-            <span data-lang="en">This opens your email app with a pre-filled message. If it doesn't, email us at </span>
-            <span data-lang="de">Dies öffnet deine E-Mail-App mit vorausgefüllter Nachricht. Falls nicht, schreib an </span>
-            <span data-lang="es">Esto abre tu app de correo con un mensaje predefinido. Si no funciona, escríbenos a </span>
+            <span data-lang="en">Opens your email app with a pre-filled message — or write to </span>
+            <span data-lang="de">Öffnet deine E-Mail-App mit vorausgefüllter Nachricht — oder schreib an </span>
+            <span data-lang="es">Abre tu app de correo con un mensaje predefinido — o escríbenos a </span>
             <a href="mailto:tehstakeslinger@gmail.com?subject=Lets%20Drink%20Beta%20signup">tehstakeslinger@gmail.com</a>.
           </p>
         </form>
@@ -159,7 +163,8 @@
     document.getElementById("betaForm").addEventListener("submit", function (e) {
       e.preventDefault();
       var email = document.getElementById("beta-email").value || "(not provided)";
-      var platform = document.getElementById("beta-platform").value || "(not specified)";
+      var pf = document.querySelector('input[name="platform"]:checked');
+      var platform = pf ? pf.value : "(not specified)";
       var subject = "Lets Drink Beta signup";
       var body =
         "Lets Drink — private beta signup\n\n" +
