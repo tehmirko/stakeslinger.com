@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account &amp; Data — Stakeslinger</title>
+  <meta name="description" content="Request deletion of your Stakeslinger account and associated personal data.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://stakeslinger.com/delete-account.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/icons/icon-32.png">
+  <meta name="theme-color" content="#101010">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">
+        <img src="/images/logo.png" alt="Stakeslinger" onerror="this.style.display='none'">
+        <span>Stakeslinger</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/" class="hide-mobile"><span data-lang="en">Home</span><span data-lang="de">Start</span><span data-lang="es">Inicio</span></a>
+        <div class="lang-toggle">
+          <button data-set-lang="en">EN</button>
+          <button data-set-lang="de">DE</button>
+          <button data-set-lang="es">ES</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container legal">
+
+    <!-- ===================== ENGLISH ===================== -->
+    <div data-lang="en">
+      <h1>Delete Account &amp; Data</h1>
+      <p>You can request deletion of your Stakeslinger account and the personal data associated with it.
+      This page applies to Stakeslinger and its mobile apps.</p>
+
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your account and profile data (e.g. email, display name)</li>
+        <li>Content you created or stored in the app</li>
+        <li>Usage and device data linked to your account</li>
+      </ul>
+
+      <h2>What may be retained</h2>
+      <p>We may retain limited data where required by law (e.g. tax, security, or fraud-prevention records),
+      and anonymized/aggregated data that can no longer identify you.</p>
+
+      <h2>How long it takes</h2>
+      <p>Requests are normally processed within <strong>30 days</strong>. We may contact you at the email you
+      provide to verify the request.</p>
+    </div>
+
+    <!-- ===================== DEUTSCH ===================== -->
+    <div data-lang="de">
+      <h1>Konto &amp; Daten löschen</h1>
+      <p>Sie können die Löschung Ihres Stakeslinger-Kontos und der damit verbundenen personenbezogenen Daten
+      beantragen. Diese Seite gilt für Stakeslinger und seine mobilen Apps.</p>
+
+      <h2>Was gelöscht wird</h2>
+      <ul>
+        <li>Ihr Konto und Profildaten (z. B. E-Mail, Anzeigename)</li>
+        <li>In der App erstellte oder gespeicherte Inhalte</li>
+        <li>Mit Ihrem Konto verknüpfte Nutzungs- und Gerätedaten</li>
+      </ul>
+
+      <h2>Was aufbewahrt werden kann</h2>
+      <p>Wir können begrenzte Daten aufbewahren, soweit gesetzlich erforderlich (z. B. Steuer-, Sicherheits-
+      oder Betrugspräventionsunterlagen) sowie anonymisierte/aggregierte Daten, die Sie nicht mehr identifizieren.</p>
+
+      <h2>Dauer</h2>
+      <p>Anfragen werden in der Regel innerhalb von <strong>30 Tagen</strong> bearbeitet. Wir können Sie unter
+      der angegebenen E-Mail zur Bestätigung kontaktieren.</p>
+    </div>
+
+    <!-- ===================== ESPAÑOL ===================== -->
+    <div data-lang="es">
+      <h1>Eliminar cuenta y datos</h1>
+      <p>Puede solicitar la eliminación de su cuenta de Stakeslinger y de los datos personales asociados.
+      Esta página aplica a Stakeslinger y sus aplicaciones móviles.</p>
+
+      <h2>Qué se elimina</h2>
+      <ul>
+        <li>Su cuenta y datos de perfil (p. ej., correo, nombre visible)</li>
+        <li>Contenido que creó o almacenó en la app</li>
+        <li>Datos de uso y de dispositivo vinculados a su cuenta</li>
+      </ul>
+
+      <h2>Qué puede conservarse</h2>
+      <p>Podemos conservar datos limitados cuando la ley lo exija (p. ej., registros fiscales, de seguridad o
+      de prevención de fraude) y datos anonimizados/agregados que ya no permiten identificarle.</p>
+
+      <h2>Cuánto tarda</h2>
+      <p>Las solicitudes se procesan normalmente en un plazo de <strong>30 días</strong>. Podemos contactarle
+      en el correo indicado para verificar la solicitud.</p>
+    </div>
+
+    <!-- ===================== SHARED FORM ===================== -->
+    <form class="form" id="deleteForm">
+      <label for="name">
+        <span data-lang="en">Name</span><span data-lang="de">Name</span><span data-lang="es">Nombre</span>
+      </label>
+      <input type="text" id="name" name="name" autocomplete="name">
+
+      <label for="email">
+        <span data-lang="en">Account email *</span><span data-lang="de">Konto-E-Mail *</span><span data-lang="es">Correo de la cuenta *</span>
+      </label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+
+      <label for="app">
+        <span data-lang="en">App</span><span data-lang="de">App</span><span data-lang="es">Aplicación</span>
+      </label>
+      <input type="text" id="app" name="app" placeholder="Stakeslinger app name">
+
+      <label for="reason">
+        <span data-lang="en">Details (optional)</span><span data-lang="de">Details (optional)</span><span data-lang="es">Detalles (opcional)</span>
+      </label>
+      <textarea id="reason" name="reason"></textarea>
+
+      <button type="submit" class="btn btn-primary">
+        <span data-lang="en">Submit deletion request</span><span data-lang="de">Löschung beantragen</span><span data-lang="es">Enviar solicitud de eliminación</span>
+      </button>
+
+      <p class="note">
+        <span data-lang="en">This opens your email app with a pre-filled message to our team. If it doesn't, email us directly at </span>
+        <span data-lang="de">Dies öffnet Ihre E-Mail-App mit einer vorausgefüllten Nachricht an unser Team. Falls nicht, schreiben Sie direkt an </span>
+        <span data-lang="es">Esto abre su app de correo con un mensaje predefinido para nuestro equipo. Si no funciona, escríbanos directamente a </span>
+        <a href="mailto:tehstakeslinger@gmail.com?subject=Data%20deletion%20request">tehstakeslinger@gmail.com</a>.
+      </p>
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year">2026</span> Stakeslinger</div>
+      <nav class="footer-links">
+        <a href="/privacy-policy.html"><span data-lang="en">Privacy Policy</span><span data-lang="de">Datenschutz</span><span data-lang="es">Privacidad</span></a>
+        <a href="/terms.html"><span data-lang="en">Terms</span><span data-lang="de">AGB</span><span data-lang="es">Términos</span></a>
+        <a href="/impressum.html"><span data-lang="en">Legal Notice</span><span data-lang="de">Rechtliches</span><span data-lang="es">Aviso legal</span></a>
+        <a href="/delete-account.html"><span data-lang="en">Delete Account</span><span data-lang="de">Konto löschen</span><span data-lang="es">Eliminar cuenta</span></a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    document.getElementById("deleteForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("name").value || "(not provided)";
+      var email = document.getElementById("email").value || "(not provided)";
+      var app = document.getElementById("app").value || "(not provided)";
+      var reason = document.getElementById("reason").value || "(none)";
+      var subject = "Data deletion request";
+      var body =
+        "Account/data deletion request\n\n" +
+        "Name: " + name + "\n" +
+        "Account email: " + email + "\n" +
+        "App: " + app + "\n" +
+        "Details: " + reason + "\n\n" +
+        "I request deletion of my Stakeslinger account and associated personal data.";
+      window.location.href =
+        "mailto:tehstakeslinger@gmail.com?subject=" +
+        encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
